@@ -1,16 +1,8 @@
-/* =====================================
-   CAMPUS EVENT BOARD - ORGANIZER
-   Shared CSS for all 6 HTML pages
-===================================== */
-
 * {
   box-sizing: border-box;
 }
 
-/* =====================================
-   Body
-===================================== */
-
+/* Body */
 body {
   margin: 0;
   padding: 0;
@@ -19,10 +11,7 @@ body {
   color: #303030;
 }
 
-/* =====================================
-   Header
-===================================== */
-
+/* Header */
 .org-header,
 .event-header,
 .manage-header,
@@ -33,8 +22,6 @@ body {
   padding: 22px 35px;
   text-align: center;
 }
-
-/* Main Header Image */
 
 .header {
   position: relative;
@@ -75,11 +62,6 @@ body {
   margin: 8px 0 0;
 }
 
-.header-text h2 {
-  font-size: 23px;
-  margin: 8px 0 0;
-}
-
 .header h1,
 .org-header h1,
 .event-header h1,
@@ -89,10 +71,7 @@ body {
   margin-bottom: 8px;
 }
 
-/* =====================================
-   Navigation
-===================================== */
-
+/* Navigation */
 .topnav,
 .org-nav,
 .event-nav,
@@ -127,33 +106,25 @@ body {
   text-decoration: underline;
 }
 
-/* =====================================
-   Common Form Design
-===================================== */
-
+/* Common Form Design */
 form {
   width: 65%;
   max-width: 850px;
   margin: 30px auto;
   padding: 24px;
-  background-color: #ffffff;
+  background-color: white;
   border: 1.5px solid #a98b7b;
   border-radius: 7px;
 }
 
-/* =====================================
-   Fieldset Design
-===================================== */
-
+/* Fieldset */
 fieldset {
   border: 1.5px solid #a98b7b;
   padding: 25px 20px 20px;
   margin-bottom: 22px;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: white;
 }
-
-/* Legend Design */
 
 legend {
   background-color: #5b4036;
@@ -165,10 +136,7 @@ legend {
   margin-left: 8px;
 }
 
-/* =====================================
-   Labels
-===================================== */
-
+/* Labels */
 label {
   display: inline-block;
   margin: 8px 0 6px;
@@ -177,10 +145,7 @@ label {
   color: #303030;
 }
 
-/* =====================================
-   Input Fields
-===================================== */
-
+/* Input Fields */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -196,7 +161,7 @@ textarea {
   border-radius: 4px;
   font-family: inherit;
   font-size: 14px;
-  background-color: #fff;
+  background-color: white;
 }
 
 textarea {
@@ -210,10 +175,7 @@ textarea:focus {
   border-color: #a96843;
 }
 
-/* =====================================
-   Buttons
-===================================== */
-
+/* Buttons */
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -244,10 +206,7 @@ input[type="reset"]:hover {
   margin-top: 18px;
 }
 
-/* =====================================
-   Error Messages
-===================================== */
-
+/* Error Messages */
 .error,
 .registration-error,
 .event-error,
@@ -258,10 +217,7 @@ input[type="reset"]:hover {
   margin: 4px 0 8px;
 }
 
-/* =====================================
-   Result Messages
-===================================== */
-
+/* Result Messages */
 #ResultText,
 #LoginResult,
 #eventResult,
@@ -273,20 +229,20 @@ input[type="reset"]:hover {
   margin: 14px 0;
 }
 
-/* =====================================
-   Other Text
-===================================== */
-
+/* Other Text */
 .hint,
 .login-link {
   text-align: center;
   margin-top: 18px;
 }
 
-/* =====================================
-   Page Containers
-===================================== */
+.registration-heading,
+.event-subtitle,
+.cancel-description {
+  text-align: center;
+}
 
+/* Page Containers */
 .registration-container,
 .registrations-container,
 .view-registration-container,
@@ -297,21 +253,12 @@ input[type="reset"]:hover {
   max-width: 850px;
   margin: 35px auto;
   padding: 25px;
-  background-color: #ffffff;
+  background-color: white;
   border: 1px solid #dfd2ca;
   border-radius: 7px;
 }
 
-/* =====================================
-   Page Headings
-===================================== */
-
-.registration-heading,
-.event-subtitle,
-.cancel-description {
-  text-align: center;
-}
-
+/* Page Headings */
 .registration-heading h2,
 .event-container h2,
 .manage-container h2,
@@ -336,10 +283,7 @@ input[type="reset"]:hover {
   margin-bottom: 12px;
 }
 
-/* =====================================
-   Registration Table
-===================================== */
-
+/* Registration Table */
 .registration-table {
   width: 100%;
   border-collapse: collapse;
@@ -362,10 +306,7 @@ input[type="reset"]:hover {
   background-color: #f5efeb;
 }
 
-/* =====================================
-   Cancellation Checkbox
-===================================== */
-
+/* Cancellation Checkbox */
 .cancel-confirm {
   margin-top: 18px;
 }
@@ -379,10 +320,7 @@ input[type="reset"]:hover {
   display: inline;
 }
 
-/* =====================================
-   Footer
-===================================== */
-
+/* Footer */
 .footer,
 .org-footer,
 .event-footer,
@@ -403,72 +341,4 @@ input[type="reset"]:hover {
 .registration-footer p,
 .cancel-footer p {
   margin: 0;
-}
-
-/* =====================================
-   Responsive Design
-===================================== */
-
-@media screen and (max-width: 700px) {
-  form,
-  .registration-container,
-  .event-container,
-  .manage-container,
-  .registrations-container,
-  .view-registration-container,
-  .cancel-container {
-    width: 94%;
-    padding: 16px;
-  }
-
-  /* Header Image */
-
-  .header {
-    width: 100%;
-    height: 150px;
-    padding: 0;
-  }
-
-  .header-image {
-    width: 100%;
-    height: 100%;
-  }
-
-  .header h1 {
-    font-size: 24px;
-  }
-
-  .header h2 {
-    font-size: 18px;
-  }
-
-  /* Other Page Headers */
-
-  .org-header,
-  .event-header,
-  .manage-header,
-  .registration-header,
-  .cancel-header {
-    padding: 18px;
-  }
-
-  /* Navigation */
-
-  .topnav,
-  .org-nav,
-  .event-nav,
-  .manage-nav,
-  .registration-nav,
-  .cancel-nav {
-    padding: 12px 8px;
-  }
-
-  .topnav a,
-  .org-nav a,
-  .event-nav a,
-  .manage-nav a,
-  .registration-nav a,
-  .cancel-nav a {
-    margin: 6px;
-  }
 }
