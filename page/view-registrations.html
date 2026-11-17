@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>View Registrations</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <div class="header">
+      <img
+        src="../image/organizer-banner.png"
+        alt="Campus Event Board"
+        class="header-image"
+      />
+
+      <div class="header-text">
+        <h1>Campus Event Board</h1>
+        <h2>Organizer Workspace</h2>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+
+    <nav class="registration-nav">
+      <a href="organizer-login.html">Login</a>
+      <a href="organizer-registration.html">Registration</a>
+      <a href="create-event.html">Create Event</a>
+      <a href="manage-my-events.html">Manage Events</a>
+      <a href="view-registrations.html">Registrations</a>
+      <a href="cancel-event.html">Cancel Event</a>
+    </nav>
+
+    <!-- Main Content -->
+
+    <main class="view-registration-container">
+      <h2>View Event Registrations</h2>
+
+      <p>Enter the event information to view its registrations.</p>
+
+      <form id="ViewRegistrationForm" novalidate>
+        <fieldset>
+          <legend>Event Registration Information</legend>
+
+          <label for="eventID">Event ID</label>
+
+          <input type="text" id="eventID" placeholder="Enter event ID" />
+
+          <p id="idError" class="registration-error"></p>
+
+          <label for="eventTitle">Event Title</label>
+
+          <input type="text" id="eventTitle" placeholder="Enter event title" />
+
+          <p id="titleError" class="registration-error"></p>
+
+          <label for="registrationDate">Registration Date</label>
+
+          <input type="date" id="registrationDate" />
+
+          <p id="dateError" class="registration-error"></p>
+        </fieldset>
+
+        <div class="view-registration-buttons">
+          <input type="submit" value="View Registrations" />
+          <input type="reset" value="Clear" />
+        </div>
+
+        <p id="registrationResult"></p>
+      </form>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="registration-footer">
+      <p>Campus Event Board | Organizer Panel</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

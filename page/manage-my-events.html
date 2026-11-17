@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Manage My Events</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <img
+        src="../image/organizer-banner.png"
+        alt="Campus Event Board"
+        class="header-image"
+      />
+
+      <div class="header-text">
+        <h1>Campus Event Board</h1>
+        <h2>Organizer Workspace</h2>
+      </div>
+    </div>
+
+    <nav class="manage-nav">
+      <a href="organizer-login.html">Login</a>
+      <a href="organizer-registration.html">Registration</a>
+      <a href="create-event.html">Create Event</a>
+      <a href="manage-my-events.html">Manage Events</a>
+      <a href="view-registrations.html">Registrations</a>
+      <a href="cancel-event.html">Cancel Event</a>
+    </nav>
+
+    <div class="manage-container">
+      <h2>Manage My Events</h2>
+      <p>Review the event information and available actions.</p>
+
+      <form id="ManageEventForm" novalidate>
+        <fieldset>
+          <legend>Event Details</legend>
+
+          <label for="eventID">Event ID</label>
+          <input type="text" id="eventID" placeholder="Enter event ID" />
+          <p id="idError" class="manage-error"></p>
+
+          <label for="eventTitle">Event Title</label>
+          <input type="text" id="eventTitle" placeholder="Enter event title" />
+          <p id="titleError" class="manage-error"></p>
+
+          <label for="eventDate">Event Date</label>
+          <input type="date" id="eventDate" />
+          <p id="dateError" class="manage-error"></p>
+
+          <label for="eventTime">Event Time</label>
+          <input type="time" id="eventTime" />
+          <p id="timeError" class="manage-error"></p>
+
+          <label for="venue">Venue</label>
+          <input type="text" id="venue" placeholder="Enter venue" />
+          <p id="venueError" class="manage-error"></p>
+
+          <label for="category">Event Category</label>
+
+          <select id="category">
+            <option value="">Select category</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Seminar">Seminar</option>
+            <option value="Competition">Competition</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Sports">Sports</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <p id="categoryError" class="manage-error"></p>
+
+          <label for="seats">Available Seats</label>
+          <input type="number" id="seats" placeholder="Enter available seats" />
+          <p id="seatsError" class="manage-error"></p>
+
+          <label for="description">Event Description</label>
+
+          <textarea
+            id="description"
+            rows="4"
+            placeholder="Enter event description"
+          ></textarea>
+
+          <p id="descriptionError" class="manage-error"></p>
+
+          <label for="action">Select Action</label>
+
+          <select id="action">
+            <option value="">Select action</option>
+            <option value="Edit">Edit</option>
+            <option value="Delete">Delete</option>
+          </select>
+
+          <p id="actionError" class="manage-error"></p>
+        </fieldset>
+
+        <div class="manage-buttons">
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Clear" />
+        </div>
+
+        <p id="manageResult"></p>
+      </form>
+    </div>
+
+    <footer class="manage-footer">
+      <p>Campus Event Board | Organizer Panel</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Organizer Login</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <img
+        src="../image/organizer-banner.png"
+        alt="Campus Event Board"
+        class="header-image"
+      />
+      />
+      <div class="header-text">
+        <h1>Campus Event Board</h1>
+        <h2>Organizer Login</h2>
+      </div>
+    </div>
+    <div class="topnav">
+      <a href="organizer-login.html">Login</a>
+      <a href="organizer-registration.html">Registration</a>
+      <a href="create-event.html">Create Event</a>
+      <a href="manage-my-events.html">Manage My Events</a>
+      <a href="view-registrations.html">View Registrations</a>
+      <a href="cancel-event.html">Cancel Event</a>
+    </div>
+
+    <form id="LoginForm" novalidate>
+      <fieldset>
+        <legend>Sign In</legend>
+
+        <table>
+          <tr>
+            <td>
+              <label for="OrganizerID">Organizer ID:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="OrganizerID"
+                placeholder="Enter Organizer ID"
+              />
+              <p class="error" id="OrganizerIDError"></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="Email">Email:</label>
+            </td>
+            <td>
+              <input type="email" id="Email" placeholder="Enter email" />
+              <p class="error" id="EmailError"></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="Password">Password:</label>
+            </td>
+            <td>
+              <input
+                type="password"
+                id="Password"
+                placeholder="Enter password"
+              />
+              <p class="error" id="PasswordError"></p>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <p id="ResultText"></p>
+
+      <input type="submit" id="submit" value="Login" />
+      <input type="reset" id="reset" value="Reset" />
+
+      <p class="hint">
+        New organizer?
+        <a href="organizer-registration.html">Register here</a>
+      </p>
+    </form>
+
+    <div class="footer">
+      <p>Campus Event Board</p>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cancel Event</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <img
+        src="../image/organizer-banner.png"
+        alt="Campus Event Board"
+        class="header-image"
+      />
+
+      <div class="header-text">
+        <h1>Campus Event Board</h1>
+        <h2>Organizer Workspace</h2>
+      </div>
+    </div>
+
+    <nav class="cancel-nav">
+      <a href="organizer-login.html">Login</a>
+      <a href="organizer-registration.html">Registration</a>
+      <a href="create-event.html">Create Event</a>
+      <a href="manage-my-events.html">Manage Events</a>
+      <a href="view-registrations.html">Registrations</a>
+      <a href="cancel-event.html">Cancel Event</a>
+    </nav>
+
+    <div class="cancel-container">
+      <h2>Cancel an Event</h2>
+
+      <p class="cancel-description">
+        Please provide the event information and cancellation reason.
+      </p>
+
+      <form id="CancelEventForm" novalidate>
+        <fieldset>
+          <legend>Event Information</legend>
+
+          <label for="eventID">Event ID</label>
+          <input type="text" id="eventID" placeholder="Enter event ID" />
+          <p id="idError" class="cancel-error"></p>
+
+          <label for="eventTitle">Event Title</label>
+          <input type="text" id="eventTitle" placeholder="Enter event title" />
+          <p id="titleError" class="cancel-error"></p>
+
+          <label for="eventDate">Event Date</label>
+          <input type="date" id="eventDate" />
+          <p id="dateError" class="cancel-error"></p>
+
+          <label for="reason">Cancellation Reason</label>
+
+          <textarea
+            id="reason"
+            rows="5"
+            placeholder="Explain why you want to cancel this event"
+          ></textarea>
+
+          <p id="reasonError" class="cancel-error"></p>
+
+          <div class="cancel-confirm">
+            <input type="checkbox" id="confirmation" />
+
+            <label for="confirmation">
+              I confirm that I want to cancel this event.
+            </label>
+          </div>
+
+          <p id="confirmError" class="cancel-error"></p>
+        </fieldset>
+
+        <div class="cancel-buttons">
+          <input type="submit" value="Submit Request" />
+          <input type="reset" value="Clear Form" />
+        </div>
+
+        <p id="cancelResult"></p>
+      </form>
+    </div>
+
+    <footer class="cancel-footer">
+      <p>Campus Event Board | Organizer Panel</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

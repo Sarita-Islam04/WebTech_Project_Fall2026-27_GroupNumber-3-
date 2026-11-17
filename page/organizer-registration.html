@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Organizer Registration | Campus Event Board</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <div class="header">
+      <img
+        src="../image/organizer-banner.png"
+        alt="Campus Event Board"
+        class="header-image"
+      />
+
+      <div class="header-text">
+        <h1>Campus Event Board</h1>
+        <h2>Organizer Registration</h2>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+
+    <nav class="org-nav">
+      <a href="organizer-login.html">Login</a>
+      <a href="organizer-registration.html">Registration</a>
+      <a href="create-event.html">Create Event</a>
+      <a href="manage-my-events.html">My Events</a>
+      <a href="view-registrations.html">Registrations</a>
+      <a href="cancel-event.html">Cancel Event</a>
+    </nav>
+
+    <!-- Main Content -->
+
+    <main class="registration-container">
+      <div class="registration-heading">
+        <h2>Join as an Organizer</h2>
+        <p>Register your club or organization to manage campus events.</p>
+      </div>
+
+      <form id="RegisterForm" novalidate>
+        <fieldset>
+          <legend>Organization Details</legend>
+
+          <div class="form-group">
+            <label for="ClubName">Club / Organization Name</label>
+
+            <input
+              type="text"
+              id="ClubName"
+              placeholder="Enter organization name"
+            />
+
+            <p class="error" id="ClubNameError"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="OrganizerID">Organizer ID</label>
+
+            <input
+              type="text"
+              id="OrganizerID"
+              placeholder="Enter organizer ID"
+            />
+
+            <p class="error" id="OrganizerIDError"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="Department">Department</label>
+
+            <select id="Department">
+              <option value="">Select Department</option>
+              <option value="CSE">Computer Science & Engineering</option>
+              <option value="EEE">Electrical & Electronic Engineering</option>
+              <option value="BBA">Business Administration</option>
+              <option value="English">English</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <p class="error" id="DepartmentError"></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact Information</legend>
+
+          <div class="form-group">
+            <label for="ContactName">Contact Person Name</label>
+
+            <input
+              type="text"
+              id="ContactName"
+              placeholder="Enter contact person's name"
+            />
+
+            <p class="error" id="ContactNameError"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="Email">Email Address</label>
+
+            <input type="email" id="Email" placeholder="example@email.com" />
+
+            <p class="error" id="EmailError"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="Phone">Phone Number</label>
+
+            <input type="tel" id="Phone" placeholder="Enter phone number" />
+
+            <p class="error" id="PhoneError"></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Information</legend>
+
+          <div class="form-group">
+            <label for="Password">Password</label>
+
+            <input
+              type="password"
+              id="Password"
+              placeholder="Create a password"
+            />
+
+            <p class="error" id="PasswordError"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="ConfirmPassword">Confirm Password</label>
+
+            <input
+              type="password"
+              id="ConfirmPassword"
+              placeholder="Enter password again"
+            />
+
+            <p class="error" id="ConfirmPasswordError"></p>
+          </div>
+        </fieldset>
+
+        <p id="ResultText"></p>
+
+        <div class="form-buttons">
+          <input type="submit" value="Create Account" />
+          <input type="reset" value="Clear Form" />
+        </div>
+
+        <p class="login-link">
+          Already registered?
+          <a href="organizer-login.html">Sign in here</a>
+        </p>
+      </form>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="org-footer">
+      <p>Campus Event Board | University Event Management</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

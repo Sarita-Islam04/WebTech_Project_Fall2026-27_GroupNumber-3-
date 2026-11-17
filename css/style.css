@@ -1,0 +1,474 @@
+/* =====================================
+   CAMPUS EVENT BOARD - ORGANIZER
+   Shared CSS for all 6 HTML pages
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =====================================
+   Body
+===================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f5f2;
+  color: #303030;
+}
+
+/* =====================================
+   Header
+===================================== */
+
+.org-header,
+.event-header,
+.manage-header,
+.registration-header,
+.cancel-header {
+  background-color: #5b4036;
+  color: white;
+  padding: 22px 35px;
+  text-align: center;
+}
+
+/* Main Header Image */
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.header-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
+  text-shadow: 1px 1px 4px black;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin: 0 0 10px;
+}
+
+.header h2 {
+  font-size: 23px;
+  margin: 8px 0 0;
+}
+
+.header-text h2 {
+  font-size: 23px;
+  margin: 8px 0 0;
+}
+
+.header h1,
+.org-header h1,
+.event-header h1,
+.manage-header h1,
+.registration-header h1,
+.cancel-header h1 {
+  margin-bottom: 8px;
+}
+
+/* =====================================
+   Navigation
+===================================== */
+
+.topnav,
+.org-nav,
+.event-nav,
+.manage-nav,
+.registration-nav,
+.cancel-nav {
+  background-color: #5b4036;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.topnav a,
+.org-nav a,
+.event-nav a,
+.manage-nav a,
+.registration-nav a,
+.cancel-nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px 9px;
+}
+
+.topnav a:hover,
+.org-nav a:hover,
+.event-nav a:hover,
+.manage-nav a:hover,
+.registration-nav a:hover,
+.cancel-nav a:hover {
+  color: #e8b99a;
+  text-decoration: underline;
+}
+
+/* =====================================
+   Common Form Design
+===================================== */
+
+form {
+  width: 65%;
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1.5px solid #a98b7b;
+  border-radius: 7px;
+}
+
+/* =====================================
+   Fieldset Design
+===================================== */
+
+fieldset {
+  border: 1.5px solid #a98b7b;
+  padding: 25px 20px 20px;
+  margin-bottom: 22px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+/* Legend Design */
+
+legend {
+  background-color: #5b4036;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+/* =====================================
+   Labels
+===================================== */
+
+label {
+  display: inline-block;
+  margin: 8px 0 6px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #303030;
+}
+
+/* =====================================
+   Input Fields
+===================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbbdb5;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #d8a17c;
+  border-color: #a96843;
+}
+
+/* =====================================
+   Buttons
+===================================== */
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  width: auto;
+  padding: 10px 22px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5b4036;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #b66b42;
+}
+
+.form-buttons,
+.event-buttons,
+.manage-buttons,
+.view-registration-buttons,
+.cancel-buttons {
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* =====================================
+   Error Messages
+===================================== */
+
+.error,
+.registration-error,
+.event-error,
+.manage-error,
+.cancel-error {
+  color: #c62828;
+  font-size: 13px;
+  margin: 4px 0 8px;
+}
+
+/* =====================================
+   Result Messages
+===================================== */
+
+#ResultText,
+#LoginResult,
+#eventResult,
+#manageResult,
+#registrationResult,
+#cancelResult {
+  text-align: center;
+  font-weight: bold;
+  margin: 14px 0;
+}
+
+/* =====================================
+   Other Text
+===================================== */
+
+.hint,
+.login-link {
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* =====================================
+   Page Containers
+===================================== */
+
+.registration-container,
+.registrations-container,
+.view-registration-container,
+.event-container,
+.manage-container,
+.cancel-container {
+  width: 65%;
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border: 1px solid #dfd2ca;
+  border-radius: 7px;
+}
+
+/* =====================================
+   Page Headings
+===================================== */
+
+.registration-heading,
+.event-subtitle,
+.cancel-description {
+  text-align: center;
+}
+
+.registration-heading h2,
+.event-container h2,
+.manage-container h2,
+.registrations-container h2,
+.view-registration-container h2,
+.cancel-container h2 {
+  color: #5b4036;
+  text-align: center;
+}
+
+.registration-heading p,
+.event-subtitle,
+.manage-container > p,
+.registrations-container > p,
+.view-registration-container > p,
+.cancel-description {
+  color: #777;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+/* =====================================
+   Registration Table
+===================================== */
+
+.registration-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.registration-table th,
+.registration-table td {
+  border: 1px solid #cdbbb0;
+  padding: 12px;
+  text-align: left;
+}
+
+.registration-table th {
+  background-color: #5b4036;
+  color: white;
+}
+
+.registration-table tr:nth-child(even) {
+  background-color: #f5efeb;
+}
+
+/* =====================================
+   Cancellation Checkbox
+===================================== */
+
+.cancel-confirm {
+  margin-top: 18px;
+}
+
+.cancel-confirm input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+.cancel-confirm label {
+  display: inline;
+}
+
+/* =====================================
+   Footer
+===================================== */
+
+.footer,
+.org-footer,
+.event-footer,
+.manage-footer,
+.registration-footer,
+.cancel-footer {
+  background-color: #5b4036;
+  color: white;
+  text-align: center;
+  padding: 13px;
+  margin-top: 25px;
+}
+
+.footer p,
+.org-footer p,
+.event-footer p,
+.manage-footer p,
+.registration-footer p,
+.cancel-footer p {
+  margin: 0;
+}
+
+/* =====================================
+   Responsive Design
+===================================== */
+
+@media screen and (max-width: 700px) {
+  form,
+  .registration-container,
+  .event-container,
+  .manage-container,
+  .registrations-container,
+  .view-registration-container,
+  .cancel-container {
+    width: 94%;
+    padding: 16px;
+  }
+
+  /* Header Image */
+
+  .header {
+    width: 100%;
+    height: 150px;
+    padding: 0;
+  }
+
+  .header-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  /* Other Page Headers */
+
+  .org-header,
+  .event-header,
+  .manage-header,
+  .registration-header,
+  .cancel-header {
+    padding: 18px;
+  }
+
+  /* Navigation */
+
+  .topnav,
+  .org-nav,
+  .event-nav,
+  .manage-nav,
+  .registration-nav,
+  .cancel-nav {
+    padding: 12px 8px;
+  }
+
+  .topnav a,
+  .org-nav a,
+  .event-nav a,
+  .manage-nav a,
+  .registration-nav a,
+  .cancel-nav a {
+    margin: 6px;
+  }
+}
