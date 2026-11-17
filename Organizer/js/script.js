@@ -1,12 +1,6 @@
-// =====================================
-// CAMPUS EVENT BOARD - ORGANIZER
-// Shared JavaScript for all 6 HTML pages
-// =====================================
-
 // Common email validation
 function isValidEmail(email) {
   var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
   return emailPattern.test(email);
 }
 
@@ -35,16 +29,12 @@ function clearFormMessages(form) {
   }
 }
 
-// =====================================
-// 1. ORGANIZER LOGIN
-// =====================================
-
+// 1. Organizer Login
 var loginForm = document.getElementById("LoginForm");
 
 if (loginForm !== null) {
   loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     clearFormMessages(loginForm);
 
     var organizerID = document.getElementById("OrganizerID").value.trim();
@@ -56,32 +46,27 @@ if (loginForm !== null) {
     // Organizer ID validation
     if (organizerID == "") {
       showError("OrganizerIDError", "Organizer ID is required.");
-
       valid = false;
     } else if (organizerID.length < 3) {
       showError(
         "OrganizerIDError",
         "Organizer ID must contain at least 3 characters.",
       );
-
       valid = false;
     }
 
     // Email validation
     if (email == "") {
       showError("EmailError", "Email is required.");
-
       valid = false;
     } else if (!isValidEmail(email)) {
       showError("EmailError", "Enter a valid email address.");
-
       valid = false;
     }
 
     // Password validation
     if (password == "") {
       showError("PasswordError", "Password is required.");
-
       valid = false;
     }
 
@@ -99,16 +84,12 @@ if (loginForm !== null) {
   });
 }
 
-// =====================================
-// 2. ORGANIZER REGISTRATION
-// =====================================
-
+// 2. Organizer Registration
 var registerForm = document.getElementById("RegisterForm");
 
 if (registerForm !== null) {
   registerForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     clearFormMessages(registerForm);
 
     var clubName = document.getElementById("ClubName").value.trim();
@@ -125,93 +106,78 @@ if (registerForm !== null) {
     // Club name validation
     if (clubName == "") {
       showError("ClubNameError", "Organization name is required.");
-
       valid = false;
     } else if (clubName.length < 3) {
       showError("ClubNameError", "Name must contain at least 3 characters.");
-
       valid = false;
     }
 
     // Organizer ID validation
     if (organizerID == "") {
       showError("OrganizerIDError", "Organizer ID is required.");
-
       valid = false;
     } else if (organizerID.length < 3) {
       showError(
         "OrganizerIDError",
         "Organizer ID must contain at least 3 characters.",
       );
-
       valid = false;
     }
 
     // Department validation
     if (department == "") {
       showError("DepartmentError", "Please select a department.");
-
       valid = false;
     }
 
     // Contact name validation
     if (contactName == "") {
       showError("ContactNameError", "Contact person name is required.");
-
       valid = false;
     } else if (contactName.length < 3) {
       showError("ContactNameError", "Name must contain at least 3 characters.");
-
       valid = false;
     }
 
     // Email validation
     if (email == "") {
       showError("EmailError", "Email is required.");
-
       valid = false;
     } else if (!isValidEmail(email)) {
       showError("EmailError", "Enter a valid email address.");
-
       valid = false;
     }
 
     // Phone validation
     if (phone == "") {
       showError("PhoneError", "Phone number is required.");
-
       valid = false;
     } else if (!/^01[3-9][0-9]{8}$/.test(phone)) {
       showError(
         "PhoneError",
         "Enter a valid 11-digit Bangladesh mobile number.",
       );
-
       valid = false;
     }
 
     // Password validation
     if (password == "") {
       showError("PasswordError", "Password is required.");
-
       valid = false;
     } else if (password.length < 8) {
       showError(
         "PasswordError",
         "Password must contain at least 8 characters.",
       );
-
       valid = false;
     }
 
     // Confirm password validation
     if (confirmPassword == "") {
       showError("ConfirmPasswordError", "Please confirm your password.");
-
       valid = false;
     } else if (password != confirmPassword) {
       showError("ConfirmPasswordError", "Passwords do not match.");
-
       valid = false;
     }
 
@@ -229,16 +195,12 @@ if (registerForm !== null) {
   });
 }
 
-// =====================================
-// 3. CREATE EVENT
-// =====================================
-
+// 3. Create Event
 var eventForm = document.getElementById("EventForm");
 
 if (eventForm !== null) {
   eventForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     clearFormMessages(eventForm);
 
     var title = document.getElementById("eventTitle").value.trim();
@@ -254,14 +216,12 @@ if (eventForm !== null) {
     // Event title validation
     if (title == "") {
       showError("titleError", "Event title is required.");
-
       valid = false;
     } else if (title.length < 3) {
       showError(
         "titleError",
         "Event title must contain at least 3 characters.",
       );
-
       valid = false;
     }
 
@@ -277,39 +237,33 @@ if (eventForm !== null) {
 
     if (date == "") {
       showError("dateError", "Please select an event date.");
-
       valid = false;
     } else if (date < currentDate) {
       showError("dateError", "Event date cannot be in the past.");
-
       valid = false;
     }
 
     // Event time validation
     if (time == "") {
       showError("timeError", "Please select an event time.");
-
       valid = false;
     }
 
     // Venue validation
     if (venue == "") {
       showError("venueError", "Venue is required.");
-
       valid = false;
     }
 
     // Category validation
     if (category == "") {
       showError("categoryError", "Please select an event category.");
-
       valid = false;
     }
 
     // Available seats validation
     if (seats == "") {
       showError("seatsError", "Available seats are required.");
-
       valid = false;
     } else if (
       Number(seats) < 1 ||
@@ -320,21 +274,18 @@ if (eventForm !== null) {
         "seatsError",
         "Seats must be a whole number between 1 and 1000.",
       );
-
       valid = false;
     }
 
     // Description validation
     if (description == "") {
       showError("descriptionError", "Event description is required.");
-
       valid = false;
     } else if (description.length < 10) {
       showError(
         "descriptionError",
         "Description must contain at least 10 characters.",
       );
-
       valid = false;
     }
 
@@ -352,16 +303,12 @@ if (eventForm !== null) {
   });
 }
 
-// =====================================
-// 4. MANAGE MY EVENTS
-// =====================================
-
+// 4. Manage My Events
 var manageForm = document.getElementById("ManageEventForm");
 
 if (manageForm !== null) {
   manageForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     clearFormMessages(manageForm);
 
     var id = document.getElementById("eventID").value.trim();
@@ -379,49 +326,42 @@ if (manageForm !== null) {
     // Event ID validation
     if (id == "") {
       showError("idError", "Event ID is required.");
-
       valid = false;
     }
 
     // Event title validation
     if (title == "") {
       showError("titleError", "Event title is required.");
-
       valid = false;
     }
 
     // Event date validation
     if (date == "") {
       showError("dateError", "Please select an event date.");
-
       valid = false;
     }
 
     // Event time validation
     if (time == "") {
       showError("timeError", "Please select an event time.");
-
       valid = false;
     }
 
     // Venue validation
     if (venue == "") {
       showError("venueError", "Venue is required.");
-
       valid = false;
     }
 
     // Category validation
     if (category == "") {
       showError("categoryError", "Please select a category.");
-
       valid = false;
     }
 
     // Available seats validation
     if (seats == "") {
       showError("seatsError", "Available seats are required.");
-
       valid = false;
     } else if (
       Number(seats) < 1 ||
@@ -432,21 +372,18 @@ if (manageForm !== null) {
         "seatsError",
         "Seats must be a whole number between 1 and 1000.",
       );
-
       valid = false;
     }
 
     // Description validation
     if (description == "") {
       showError("descriptionError", "Event description is required.");
-
       valid = false;
     }
 
     // Action validation
     if (action == "") {
       showError("actionError", "Please select an action.");
-
       valid = false;
     }
 
@@ -464,16 +401,12 @@ if (manageForm !== null) {
   });
 }
 
-// =====================================
-// 5. VIEW REGISTRATIONS
-// =====================================
-
+// 5. View Registrations
 var viewRegistrationForm = document.getElementById("ViewRegistrationForm");
 
 if (viewRegistrationForm !== null) {
   viewRegistrationForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     clearFormMessages(viewRegistrationForm);
 
     var id = document.getElementById("eventID").value.trim();
@@ -485,21 +418,18 @@ if (viewRegistrationForm !== null) {
     // Event ID validation
     if (id == "") {
       showError("idError", "Event ID is required.");
-
       valid = false;
     }
 
     // Event title validation
     if (title == "") {
       showError("titleError", "Event title is required.");
-
       valid = false;
     }
 
     // Registration date validation
     if (date == "") {
       showError("dateError", "Please select the registration date.");
-
       valid = false;
     }
 
@@ -517,16 +447,12 @@ if (viewRegistrationForm !== null) {
   });
 }
 
-// =====================================
-// 6. CANCEL EVENT
-// =====================================
-
+// 6. Cancel Event
 var cancelForm = document.getElementById("CancelEventForm");
 
 if (cancelForm !== null) {
   cancelForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     clearFormMessages(cancelForm);
 
     var id = document.getElementById("eventID").value.trim();
@@ -540,39 +466,33 @@ if (cancelForm !== null) {
     // Event ID validation
     if (id == "") {
       showError("idError", "Event ID is required.");
-
       valid = false;
     }
 
     // Event title validation
     if (title == "") {
       showError("titleError", "Event title is required.");
-
       valid = false;
     }
 
     // Event date validation
     if (date == "") {
       showError("dateError", "Please select the event date.");
-
       valid = false;
     }
 
     // Cancellation reason validation
     if (reason == "") {
       showError("reasonError", "Please provide a cancellation reason.");
-
       valid = false;
     } else if (reason.length < 10) {
       showError("reasonError", "Reason must contain at least 10 characters.");
-
       valid = false;
     }
 
     // Confirmation validation
     if (confirmation == false) {
       showError("confirmError", "Please confirm the cancellation.");
-
       valid = false;
     }
 
