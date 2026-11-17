@@ -106,15 +106,14 @@ body {
   text-decoration: underline;
 }
 
-/* Common Form Design */
+/* Common Form */
 form {
   width: 65%;
   max-width: 850px;
   margin: 30px auto;
   padding: 24px;
-  background-color: white;
-  border: 1.5px solid #a98b7b;
-  border-radius: 7px;
+  background-color: transparent;
+  border: none;
 }
 
 /* Fieldset */
@@ -156,15 +155,17 @@ input[type="number"],
 select,
 textarea {
   width: 100%;
-  padding: 10px;
+  min-height: 46px;
+  padding: 13px;
   border: 1px solid #cbbdb5;
   border-radius: 4px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 15px;
   background-color: white;
 }
 
 textarea {
+  min-height: 120px;
   resize: vertical;
 }
 
@@ -197,13 +198,27 @@ input[type="reset"]:hover {
   background-color: #b66b42;
 }
 
+/* Button Alignment */
 .form-buttons,
 .event-buttons,
 .manage-buttons,
 .view-registration-buttons,
-.cancel-buttons {
-  text-align: center;
-  margin-top: 18px;
+.cancel-buttons,
+.button-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.form-buttons input,
+.event-buttons input,
+.manage-buttons input,
+.view-registration-buttons input,
+.cancel-buttons input,
+.button-area input {
+  margin: 0;
 }
 
 /* Error Messages */
@@ -229,19 +244,6 @@ input[type="reset"]:hover {
   margin: 14px 0;
 }
 
-/* Other Text */
-.hint,
-.login-link {
-  text-align: center;
-  margin-top: 18px;
-}
-
-.registration-heading,
-.event-subtitle,
-.cancel-description {
-  text-align: center;
-}
-
 /* Page Containers */
 .registration-container,
 .registrations-container,
@@ -252,35 +254,97 @@ input[type="reset"]:hover {
   width: 65%;
   max-width: 850px;
   margin: 35px auto;
-  padding: 25px;
+  padding: 30px;
   background-color: white;
   border: 1px solid #dfd2ca;
   border-radius: 7px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
 
-/* Page Headings */
+/* Page Titles */
 .registration-heading h2,
 .event-container h2,
 .manage-container h2,
 .registrations-container h2,
 .view-registration-container h2,
 .cancel-container h2 {
-  color: #5b4036;
+  display: table;
+  background-color: #5b4036;
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+  padding: 10px 22px;
+  border-radius: 5px;
+  margin: 10px auto 20px;
   text-align: center;
 }
 
+/* Page Descriptions */
 .registration-heading p,
 .event-subtitle,
 .manage-container > p,
 .registrations-container > p,
 .view-registration-container > p,
 .cancel-description {
-  color: #777;
+  color: #5b4036;
   text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.9;
+  margin-bottom: 30px;
 }
 
+/* Form Groups */
 .form-group {
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+/* Common Fieldset Design */
+.registration-container fieldset,
+.registrations-container fieldset,
+.view-registration-container fieldset,
+.event-container fieldset,
+.manage-container fieldset,
+.cancel-container fieldset,
+.login-form fieldset {
+  width: 85%;
+  margin: 25px auto;
+  padding: 28px 22px;
+  border: 1.5px solid #a98b7b;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* Login Form */
+.login-form {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 24px;
+}
+
+.login-form table {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.login-form td {
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.login-form td:first-child {
+  width: 30%;
+}
+
+.login-form td:last-child {
+  width: 70%;
+}
+
+/* Register Link */
+.register-link {
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* Registration Table */
@@ -318,6 +382,13 @@ input[type="reset"]:hover {
 
 .cancel-confirm label {
   display: inline;
+}
+
+/* Other Text */
+.hint,
+.login-link {
+  text-align: center;
+  margin-top: 18px;
 }
 
 /* Footer */

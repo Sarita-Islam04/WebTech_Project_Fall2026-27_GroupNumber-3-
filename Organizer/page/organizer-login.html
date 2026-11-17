@@ -32,7 +32,12 @@
       <a href="cancel-event.html">Cancel Event</a>
     </div>
 
-    <form id="LoginForm" novalidate>
+    <form
+      id="LoginForm"
+      class="login-form"
+      onsubmit="return validateOrganizerLogin();"
+      onreset="clearAllErrors()"
+    >
       <fieldset>
         <legend>Sign In</legend>
 
@@ -79,8 +84,10 @@
 
       <p id="ResultText"></p>
 
-      <input type="submit" id="submit" value="Login" />
-      <input type="reset" id="reset" value="Reset" />
+      <div class="button-area">
+        <input type="submit" value="Login" />
+        <input type="reset" value="Reset" />
+      </div>
 
       <p class="hint">
         New organizer?
